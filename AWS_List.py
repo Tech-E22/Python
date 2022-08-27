@@ -33,6 +33,8 @@ print("I think we completed the steps")
 
 #Researched some more and decided to edit the list and change the coding and naming convention
 
+#create empty list
+
 aws_service_list = []
 
 aws_service_list.append("lambda")
