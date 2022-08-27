@@ -1,3 +1,5 @@
+#notes at this point. lol
+
 service_list = []
 
 service_list.append("EC2")
