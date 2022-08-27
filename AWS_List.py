@@ -27,6 +27,7 @@ del aws_services[0]
 del aws_services[0]
 
 print(*aws_services)
+print("The number of services in this list now:", len(aws_services))
 
 print("I think we completed the steps")
 
