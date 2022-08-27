@@ -31,3 +31,26 @@ print("The number of services in this list now:", len(aws_services))
 
 print("I think we completed the steps")
 
+#Researched some more and decided to edit the list and change the coding and naming convention
+
+aws_service_list = []
+
+aws_service_list.append("lambda")
+aws_service_list.append("EC2")
+aws_service_list.append("ECS")
+aws_service_list.append("S3")
+aws_service_list.append("CodeBuild")
+
+print(aws_service_list)
+print(len(aws_service_list))
+
+
+#Delete services by name
+unwanted = ["S3", "EC2"]
+ 
+for element in unwanted:
+    aws_service_list.remove(element)
+    
+print(aws_service_list)
+print(len(aws_service_list))
+
