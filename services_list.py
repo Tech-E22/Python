@@ -48,6 +48,15 @@ for element in sorted(unwanted, reverse = True):
     
 print("List after removing element at indexes 0,2,3 : " ,service_list)
 
+"""
+Though indexes of elements in known, deleting the elements randomly will change the values of indexes. 
+Hence, it is always recommended to delete the largest indices first. 
+Using this strategy, index of smaller values will not be changed. 
+We can sort the list in reverse order and delete the elements of list in descending order.
+"""
+
+
+    
 print("------------------------------------------------------------------------ Remove items by name")
 service_list.extend(["EC2","DynamoDB", "Lambda"]) # append all elements at the end of the list
 print("New List: " , service_list)
