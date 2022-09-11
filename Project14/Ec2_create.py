@@ -1,33 +1,28 @@
 import boto3
 
 ec2=boto3.resource("ec2")
-ec2.create_instances(
+createinstance= ec2.create_instances(
     ImageId='ami-05fa00d4c63e32376',
     InstanceType='t2.micro',
     MaxCount=3,
     MinCount=3,
     TagSpecifications=[
-            {
-                    'ResourceType': 'instance',
-                    'Tags' : [{"Key": "Environment", "Value": "Prod"}]
-                    
-                                },
-            ],
-            
-        )
+        {
+            'ResourceType': 'instance',
+            'Tags': [
+                {
+                    'Key': 'Name',
+                    'Value': 'dev-environment',
+                },
+                {                    
+                    'Key': 'environment',
+                    'Value': 'dev',
+                },
+            ]
+        },
+    ],
+)
+#print out each instance that is created
+for instanceid in createinstance:
+    print("Here are your instance id for dev environment:", instanceid)
     
-instance= ec2.create_instances(
-        ImageId="ami-05fa00d4c63e32376",
-        InstanceType="t2.micro",
-        MaxCount=3,
-        MinCount=3,
-        TagSpecifications=[
-            {
-                    'ResourceType': 'instance',
-                    'Tags' : [{"Key": "Environment", "Value": "Prod"}]
-                    
-                                },
-            ],
-            
-        )
-print ("EC2 instances have been generated successfully")
