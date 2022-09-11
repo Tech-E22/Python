@@ -22,7 +22,7 @@ createinstance= ec2.create_instances(
         },
     ],
 )
-#print out each instance that is created
+
 for instanceid in createinstance:
     print("Here are your instance id for dev environment:", instanceid)
     
